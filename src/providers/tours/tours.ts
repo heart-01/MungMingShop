@@ -16,13 +16,21 @@ export class ToursProvider {
     //console.log('Hello ToursProvider Provider');
     
     this.data=[      //เมื่อ page ใดๆโหลดข้อมูลจากในนี้ก็จะได้ข้อมูลเป็น array
-      {id:"1",name:"siwat",tel:"0871548602"},
-      {id:"2",name:"prem",tel:"0871548603"},
-      {id:"3",name:"tuk",tel:"0871548604"}];
+      {id:"1",name:"siwat",tel:"0871548602",address:"testttttttt"},
+      {id:"2",name:"prem",tel:"0871548603",address:"testttttttt"},
+      {id:"3",name:"tuk",tel:"0871548604",address:"testttttttt"}];
   }
 
   loadAll(){ //เมธอทสำหรับโหลดข้อมูลใน data
     return Promise.resolve(this.data);
+  }
+
+  getCustomerById(id){  //เมธอทสำหรับรับค่า id 
+    for(var i=0;i<(this.data).length;i++){  //วน loop หา id เจอไอดีค่าที่พารามิเตอร์รับมา ถ้าเจอจะ return กลับมา
+      if(this.data[i].id==id){
+        return Promise.resolve(this.data[i]);
+      }
+    }
   }
 
 }

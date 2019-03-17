@@ -13,7 +13,9 @@
 <ion-content padding>
   <ion-list>
     <ion-list-header>Our Customers</ion-list-header>
-    <ion-item *ngFor="let i of allCusts"> <!-- loop for ดึงข้อมูลมาจาก allCusts -->
+    <ion-item *ngFor="let i of allCusts" (click)="showCustomer(i.id)"> 
+      <!-- loop for ดึงข้อมูลมาจาก allCusts -->
+      <!-- เมื่อเกิด event click แล้วให้ทำเมธอท showCustomer  -->
       <h2>{{i.id}}: {{i.name}}</h2>
       <p>Tel. {{i.tel}}</p>
     </ion-item>

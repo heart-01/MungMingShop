@@ -11,6 +11,7 @@ import { AboutPage } from '../pages/about/about'; //1.ทุกครั้ง�
 import { CommunityPage } from '../pages/community/community';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { SlidesPage } from '../pages/slides/slides';
+import { CustomerdetailPage } from '../pages/customerdetail/customerdetail';
 import { ToursProvider } from '../providers/tours/tours'; //2.import providers อันนี้โปรแกรมจะ import ให้เอง
 
 @NgModule({
@@ -20,7 +21,8 @@ import { ToursProvider } from '../providers/tours/tours'; //2.import providers �
     AboutPage, //2.ทุกครั้งที่สร้างเพจต้องสร้าง declarations
     CommunityPage,
     GalleryPage,
-    SlidesPage
+    SlidesPage,
+    CustomerdetailPage
   ],
   imports: [
     HttpClientModule, //3.import providers เพิ่มลงในนี้
@@ -34,7 +36,8 @@ import { ToursProvider } from '../providers/tours/tours'; //2.import providers �
     AboutPage, //3.ทุกครั้งที่สร้างเพจต้องสร้าง entryComponents
     CommunityPage,
     GalleryPage,
-    SlidesPage
+    SlidesPage,
+    CustomerdetailPage
   ],
   providers: [
     StatusBar,

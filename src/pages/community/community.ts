@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ToursProvider } from '../../providers/tours/tours'; //import providers เข้ามา
+import { CustomerdetailPage } from '../customerdetail/customerdetail';
 
 /**
  * Generated class for the CommunityPage page.
@@ -27,6 +28,10 @@ export class CommunityPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CommunityPage');
+  }
+
+  showCustomer(custId){
+    this.navCtrl.push(CustomerdetailPage,{id:custId});
   }
 
 }
