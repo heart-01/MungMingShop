@@ -11,5 +11,11 @@
 </ion-header>
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-list-header>Our Customers</ion-list-header>
+    <ion-item *ngFor="let i of allCusts"> <!-- loop for ดึงข้อมูลมาจาก allCusts -->
+      <h2>{{i.id}}: {{i.name}}</h2>
+      <p>Tel. {{i.tel}}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>

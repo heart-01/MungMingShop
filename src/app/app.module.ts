@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpClientModule } from '@angular/common/http'; //1.import providers ที่เราสร้างมาใหม่
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -10,6 +11,7 @@ import { AboutPage } from '../pages/about/about'; //1.ทุกครั้ง�
 import { CommunityPage } from '../pages/community/community';
 import { GalleryPage } from '../pages/gallery/gallery';
 import { SlidesPage } from '../pages/slides/slides';
+import { ToursProvider } from '../providers/tours/tours'; //2.import providers อันนี้โปรแกรมจะ import ให้เอง
 
 @NgModule({
   declarations: [
@@ -21,6 +23,7 @@ import { SlidesPage } from '../pages/slides/slides';
     SlidesPage
   ],
   imports: [
+    HttpClientModule, //3.import providers เพิ่มลงในนี้
     BrowserModule,
     IonicModule.forRoot(MyApp)
   ],
@@ -36,7 +39,8 @@ import { SlidesPage } from '../pages/slides/slides';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ToursProvider
   ]
 })
 export class AppModule {}
