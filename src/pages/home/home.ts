@@ -13,7 +13,8 @@ export class HomePage { //พื้นที่เขียน java script
   constructor(public navCtrl: NavController) {
 
   }
-
+  //Method push เปิดหน้าใหม่
+  //Method setRoot  เปิดหน้าใหม่ไม่สามารถย้อนกลับได้
   gotoAbout(){
     this.navCtrl.push(AboutPage); //ให้โหลดหน้า AboutPage ลงในที่นี้
   }
@@ -23,7 +24,7 @@ export class HomePage { //พื้นที่เขียน java script
   }
 
   gotoGallery(){
-    this.navCtrl.push(GalleryPage);
+    this.navCtrl.setRoot(GalleryPage);
   }
 
 }
