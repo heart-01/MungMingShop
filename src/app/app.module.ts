@@ -9,6 +9,7 @@ import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about'; //1.ทุกครั้งที่สร้างเพจต้องสร้าง import
 import { CommunityPage } from '../pages/community/community';
 import { GalleryPage } from '../pages/gallery/gallery';
+import { SlidesPage } from '../pages/slides/slides';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GalleryPage } from '../pages/gallery/gallery';
     HomePage,
     AboutPage, //2.ทุกครั้งที่สร้างเพจต้องสร้าง declarations
     CommunityPage,
-    GalleryPage
+    GalleryPage,
+    SlidesPage
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,8 @@ import { GalleryPage } from '../pages/gallery/gallery';
     HomePage,
     AboutPage, //3.ทุกครั้งที่สร้างเพจต้องสร้าง entryComponents
     CommunityPage,
-    GalleryPage
+    GalleryPage,
+    SlidesPage
   ],
   providers: [
     StatusBar,
