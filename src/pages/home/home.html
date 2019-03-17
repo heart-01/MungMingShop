@@ -1,14 +1,25 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      MungMingShop
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div class="showhead">
+    <img src="assets/imgs/home_1.jpg">
+    <p>Welcome to PolyPages</p>
+  </div>
+  <ion-list>
+    <ion-item (click)="gotoAbout()" > <!-- เมื่อคลิ๊กให้ไปหาเมธอท gotoAbout -->
+      <ion-icon name="contact"></ion-icon> About US
+    </ion-item>
+    <ion-item>
+      <ion-icon name="people"></ion-icon> Community
+    </ion-item>
+    <ion-item>
+      <ion-icon name="image"></ion-icon> Gallery
+    </ion-item>
+  </ion-list>
 </ion-content>

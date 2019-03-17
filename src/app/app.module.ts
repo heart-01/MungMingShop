@@ -6,11 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { AboutPage } from '../pages/about/about'; //1.ทุกครั้งที่สร้างเพจต้องสร้าง import
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    AboutPage //2.ทุกครั้งที่สร้างเพจต้องสร้าง declarations
   ],
   imports: [
     BrowserModule,
@@ -19,7 +21,8 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    AboutPage //3.ทุกครั้งที่สร้างเพจต้องสร้าง entryComponents
   ],
   providers: [
     StatusBar,
